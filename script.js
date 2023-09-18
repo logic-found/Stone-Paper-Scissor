@@ -2,11 +2,16 @@
 
 document.getElementById("close-rules").addEventListener("click",hideRules)
 function displayRules(){
-    document.getElementById("rules").style.display = "block"
+    const element = document.getElementById("rules")
+    element.style.visibility = "visible"
+    element.style.opacity = "1"
 }
 
 function hideRules(){
-    document.getElementById("rules").style.display = "none"
+    const element = document.getElementById("rules")
+    element.style.visibility = "hidden"
+    element.style.opacity = "0"
+
 }
 
 
