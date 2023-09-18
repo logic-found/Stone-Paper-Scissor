@@ -214,7 +214,6 @@ body{
 /* ----------------------------------------------R U L E S    C O N T E N T ---------------------------------------------------- */
 
 #rules{
-    display: none;
     position: absolute;
     top:38vh;
     right:5vh;
