@@ -14,7 +14,6 @@ function hideRules(){
 
 }
 
-
 // ------------------------------- R E S U L T -------------------------------------
 
 
@@ -123,8 +122,6 @@ function result(){
         computerResultClone.style.marginTop = '3rem';
         userParent.appendChild(userResultClone);
         computerParent.appendChild(computerResultClone);
-
-
     }
     else{
         document.getElementById("result-text2").innerHTML = "AGAINST PC"
@@ -136,8 +133,7 @@ function result(){
             document.getElementById("userScore").innerHTML = localStorage.getItem("userScore")
             document.getElementById("result-text1").innerHTML = "YOU WIN"
             document.getElementById("hurray-page-btn").style.display = "block"
-            setWinnerandLoserInResult(userResultClone,userParent,computerResultClone,computerParent)
-            
+            setWinnerandLoserInResult(userResultClone,userParent,computerResultClone,computerParent)          
         }
         else{
             //lose
@@ -147,21 +143,8 @@ function result(){
             document.getElementById("result-text1").innerHTML = "YOU LOSE"
             setWinnerandLoserInResult(computerResultClone,computerParent,userResultClone,userParent)
         }
-
-            
-        
-    }
-    
-    
-    
-        
-  
+    }      
 }
-
-
-
-
-
 
 // -------------------------------------  H U R R A Y   P A G E --------------------------------
 
