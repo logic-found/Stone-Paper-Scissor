@@ -1,0 +1,393 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+body{
+    background-color: #8CC461;
+}
+#outer{
+    width:100vw;
+    position: relative;
+}
+
+/* ---------------------------------------------S C O R E   C A R D --------------------------------------------- */
+
+#score-card-div{
+    width: 60%;
+    height: 17vh;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 1.5vh;
+    padding: 1.5%;
+    position: absolute;
+    top:5vh;
+    left:18vw;
+    display: flex;
+    justify-content: space-between;  
+}
+
+#options{
+    font-size: 5vh;
+    font-weight: 700;
+    letter-spacing: 1vh;
+}
+#score{
+    display: flex;
+}
+#score-card{
+    height: 15vh;
+    width: 9vw;
+    background-color: #fff;
+    color: #656565;
+    font-size: 1em;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2vh;
+    border-radius: 1.5vh;
+    text-align: center;
+    padding: 1vh;
+}
+.scores{
+    font-size: 2.5em;
+    color: black;
+    font-weight: 600;
+}
+
+
+ 
+/*---------------------------------------------   G A M E    D I V -----------------------------------------  */
+
+#game{
+    height: 63vh;
+    width: 40vw;
+    position: absolute;
+    top:34vh;
+    left:30vw;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    
+}
+#game > div:first-child{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#game > div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    z-index: 1;
+}
+.option-card{
+    height: 14vh;
+    width: 8vw;
+    background-color: #ffffff;
+   border-radius: 60%;
+    padding: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1;
+    
+}
+.game-choices{
+    cursor: pointer;
+
+}
+#rock{
+    border: 14px solid #0074B6;
+}
+#scissor{
+    border: 14px solid #BD00FF; 
+    z-index: 1;
+}
+#paper{
+    border: 14px solid #FFD600;
+}
+.option-card:hover{
+    padding: 2.5vh;
+}
+#rock:hover{
+    border: 10px solid #0074B6;
+}
+#scissor:hover{
+    border: 10px solid #BD00FF;  
+}
+#paper:hover{
+    border: 10px solid #FFD600;
+}
+#rock > img:hover{
+    height: 11vh;
+}
+#scissor > img:hover{
+    height: 13vh;
+}
+#paper > img:hover{
+    height: 15vh;
+}
+
+/* horz line */
+#stroke1{
+    height: 350px;
+    width: 10px;
+    transform: rotate(90deg);
+    background-color:rgba(0, 0, 0, 0.64);
+    position: absolute;
+    top:14vh;
+    left:45vw;
+
+}
+/* left stroke */
+#stroke2{
+    height: 250px;
+    width: 10px;
+    transform: rotate(140deg);
+    background-color:rgba(0, 0, 0, 0.64);
+    position: absolute;
+    top:40vh;
+    left:40vw;
+    z-index: 0;
+
+}
+/* right stroke */
+#stroke3{
+    height: 300px;
+    width: 10px;
+    transform: rotate(40deg);
+    background-color:rgba(0, 0, 0, 0.64);
+    position: absolute;
+    top:40vh;
+    right:40vw;
+    z-index: 0;
+}
+/* 
+#game-outer-div{
+    display: none;
+} */
+
+
+
+
+
+
+
+
+/* -------------------------------------------------   R E S U L T    D I V   -------------------------------------- */
+
+#result-div{
+    display: none;
+    height: 40vh;
+    width:65vw;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top:40vh;
+    left:18vw;
+    color: #ffffff;
+}
+#result-text1{
+    font-size: 2.5em;
+    font-weight: 800;
+
+}
+#result-text2{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+#result-declare{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.result-choice{
+    height: 14vh;
+    width: 8vw;
+    background-color: #ffffff;
+    border-radius: 60%;
+    padding: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------R U L E S    C O N T E N T ---------------------------------------------------- */
+
+#rules{
+    display: none;
+    position: absolute;
+    top:38vh;
+    right:5vh;
+    height: 45vh;
+    width: 20vw;
+    padding: 1vh 2vh 1vh 5vh;
+    font-size: 0.8em;
+    border: 7px solid #fff;
+    border-radius: 10px;
+    background-color:#004429;
+    color: #fff;
+    z-index: 2;
+
+}
+#rules > ul {
+    list-style: none;
+}
+#rules > ul li::before {
+    content: "\25AA";
+    color: #FFD600;
+    font-size: 1.5em;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+
+#rules >h2{
+    text-align: center;
+}
+#rules-btn{
+    right:5vh;
+    top: 90vh;
+}
+
+#close-rules{
+    position: absolute;
+    top:-5vh;
+    right:-2vh;
+}
+
+/* -------------------------------------------------- button ----------------------------------- */
+
+.btn{
+    position: absolute;
+    padding: 1vh 2vh 1vh 2vh;
+    font-size: 3vh;
+    font-weight: 500;
+    border-radius: 5px;
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+.btn:hover{
+    background-color: #fff;
+    color:#656565
+}
+
+/* --------------------------------------------  H U R R A Y   P A G E -------------------------------------- */
+#hurray-page-btn{
+    display: none;
+    top:90vh;
+    right: 23vh;
+    
+    
+
+}
+#winning-outer{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+    justify-content: space-around;
+    color: #ffffff;
+
+}
+#winning-outer > div{
+    height: 45vh;
+}
+#trophy-img{
+    position: absolute;
+    top:20vh;
+    left: 43vw;
+}
+#star1{
+    position: absolute;
+    top:50vh;
+    left: 40vw;
+}
+#star2{
+    position: absolute;
+    top:20vh;
+    right:35vw;
+}
+#star3{
+    position: absolute;
+    top:20vh;
+    left:35vw;
+}
+#star4{
+    position: absolute;
+    top:35vh;
+    left:70vh;
+}
+#star5{
+    position: absolute;
+    top:6vh;
+    right:38vw;
+}
+
+#star6{
+    position: absolute;
+    top:35vh;
+    right:70vh;
+}
+#star7{
+    position: absolute;
+    top:7vh;
+    left:40vw;
+}
+
+#hurray{
+    font-size: 5em;
+    font-weight: 800;
+    letter-spacing: 1vh;
+}
+#won{
+    font-size: 2em;
+    font-weight: 800;
+    letter-spacing: 0.5vh;
+}
+#play-again{
+    color: #6B6B6B;
+    padding: 2vh 3vh 2vh 3vh;
+    border-radius: 1vh;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    font-size: 1em;
+    font-weight: 800;
+}
+#play-again:hover{
+    background-color: transparent;
+}
+

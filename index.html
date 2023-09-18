@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock | Paper | Scissor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-----------------------------------------------------   F I R S T   P A G E -------------------------------------->
+
+    <div id="outer">
+
+        <div id="score-card-div">
+            <div id="options">
+                <p>ROCK</p>
+                <p>PAPER</p>
+                <p>SCISSORS</p>
+            </div>
+            <div id="score">
+                <div id="score-card">
+                    <p id="computer">COMPUTER SCORE</p>
+                    <p id="computerScore" class="scores"></p>
+                </div>
+                <div id="score-card">
+                    <p id="user">YOUR <br/> SCORE</p>
+                    <p id="userScore" class="scores"></p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="game-outer-div">
+            <div id="game">
+                <div>
+                    <div id="rock" class="game-choices option-card" >
+                        <img src="images/rock.png" alt="">
+                    </div>
+                    <div id="paper" class="game-choices option-card" >
+                        <img src="images/paper.png" alt="">
+                    </div>
+                </div>
+                
+                <div>
+                    <div id="scissor"  class="game-choices option-card">
+                        <img src="images/scissor.png" alt="">
+                    </div>
+                </div>
+            </div> 
+
+            <div id="stroke1"></div>
+            <div id="stroke2"></div>
+            <div id="stroke3"></div>
+            
+        </div>
+    
+        
+        
+
+         <!----------------------------------------- R E S U L T     P A G E  ----------------------------------------------->
+
+        <div id="result-div" style="display: none;">
+
+            <div id="user-div">
+                <h2>YOU PICKED</h2>
+                <br>
+                <div id="user-result"></div>
+            </div>
+
+            <div id="result-declare">
+                <p id="result-text1"></p><br>
+                <p id="result-text2"></p><br>
+                <button id="play-again" onclick=winAndPlayAgain()> Play Again</button>
+            </div>
+
+            <div id="computer-div">
+                <h2>PC PICKED</h2>
+                <br>
+                <div id="computer-result"></div>
+            </div>
+
+        </div>
+
+        <button id="hurray-page-btn" class="btn" onclick=redirectToHurrayPage()> NEXT </button>
+
+
+         
+
+    <!------------------------------------------------- R U L E S  ------------------------------------------------ -->
+    
+        <div id="rules">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none" id="close-rules">
+                <circle cx="30" cy="30" r="27.5" fill="#FF0000" stroke="white" stroke-width="5"/>
+                <text fill="#fff" font-size="40" font-weight="550" font-family="Verdana" cursor="pointer" x="15" y="43">X</text>
+            </svg>
+            <br>
+            <h2>Game Rules</h2>
+            <br>
+
+            <ul>
+                <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                <li>Agree ahead of time whether you'll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+                <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                <li>If both players lay down the same hand, each player lays down another hand</li>
+            </ul>
+        </div>
+        <button id="rules-btn" class="btn" onclick=displayRules()> RULES </button>
+        
+    </div>
+   
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
