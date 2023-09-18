@@ -115,7 +115,8 @@ function result(){
     const userParent = document.getElementById("user-result");
 
     if(gameResult == 0){
-        //tie    
+        //tie  
+        document.getElementById("play-again").innerHTML = "REPLAY"  
         document.getElementById("result-text1").innerHTML = "TIE"
         document.getElementById("result-text2").innerHTML = ""
         userResultClone.style.marginTop = '3rem';
@@ -124,6 +125,7 @@ function result(){
         computerParent.appendChild(computerResultClone);
     }
     else{
+        document.getElementById("play-again").innerHTML = "PLAY AGAIN"
         document.getElementById("result-text2").innerHTML = "AGAINST PC"
         
         if(gameResult == 1){
